@@ -1,5 +1,5 @@
 name "backup"
-version "3.7.0"
+default_version "3.10.0"
 
 dependency "ruby"
 dependency "rubygems"

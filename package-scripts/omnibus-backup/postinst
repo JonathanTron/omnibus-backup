@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Perform necessary backup setup steps
+# Perform necessary omnibus-backup setup steps
 # after package is installed.
 #
 
@@ -12,6 +12,6 @@ function error_exit
   exit 1
 }
 
-echo "Thank you for installing backup!"
+echo "Thank you for installing omnibus-backup!"
 
 exit 0

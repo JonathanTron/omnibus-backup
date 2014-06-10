@@ -17,14 +17,15 @@
 #
 
 name "libassuan"
-version "2.0.3"
+default_version "2.1.1"
 
-source :url => "ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-2.0.3.tar.bz2",
-       :md5 => "179d1918325fdb928c7bd90b8a514fc7"
+source :url => "ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-#{version}.tar.bz2",
+       :md5 => "757243cc4a71b30ed8d8dbe784035d36"
 
-relative_path "libassuan-2.0.3"
+relative_path "libassuan-#{version}"
 
-dependencies ["libgpg-error","libksba"]
+dependency "libgpg-error"
+dependency "libksba"
 
 env = {
   "CFLAGS" => "-L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include",

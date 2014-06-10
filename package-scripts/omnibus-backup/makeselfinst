@@ -5,8 +5,7 @@
 
 PROGNAME=`basename $0`
 INSTALLER_DIR=`dirname $0`
-DEST_DIR=/opt/backup
-CONFIG_DIR=/etc/backup
+DEST_DIR=/opt/omnibus-backup
 USAGE="usage: $0"
 
 error_exit()

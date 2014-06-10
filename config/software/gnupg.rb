@@ -17,23 +17,39 @@
 #
 
 name "gnupg"
-version "2.0.19"
+default_version "2.0.23"
 
-source :url => "ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.0.19.tar.bz2",
-       :md5 => "6a8589381ca1b0c1a921e9955f42b016"
+source :url => "ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-#{version}.tar.bz2",
+       :md5 => "1c30b3aa1f99f17b4988e1ab616355d4"
 
-relative_path "gnupg-2.0.19"
+relative_path "gnupg-#{version}"
 
-dependencies ["libgpg-error", "libassuan", "pth", "libksba", "readline", "libgcrypt"]
+dependency "curl"
+dependency "readline"
+dependency "libassuan"
+dependency "libgpg-error"
+dependency "libgcrypt"
+dependency "libksba"
+dependency "pth"
+
+prefix = "#{install_dir}/embedded"
 
 env = {
-  "CFLAGS" => "-L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include",
-  "LD_RUN_PATH" => "#{install_dir}/embedded/lib",
-  "PATH" => "#{install_dir}/embedded/bin:#{ENV['PATH']}"
+  "CFLAGS" => "-L#{prefix}/lib -I#{prefix}/include",
+  "LD_RUN_PATH" => "#{prefix}/lib",
+  "PATH" => "#{prefix}/bin:#{ENV['PATH']}"
 }
 
 build do
-  command "./configure --prefix=#{install_dir}/embedded", :env => env
+  command ["./configure",
+           "--disable-ldap",
+           "--prefix=#{prefix}",
+           "--with-libgpg-error-prefix=#{prefix}",
+           "--with-libgcrypt-prefix=#{prefix}",
+           "--with-libassuan-prefix=#{prefix}",
+           "--with-ksba-prefix=#{prefix}",
+           "--with-pth-prefix=#{prefix}"
+           ].join(" "), :env => env
   command "make -j #{max_build_jobs}", :env => env
   command "make install", :env => env
 end

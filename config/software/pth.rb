@@ -17,12 +17,12 @@
 #
 
 name "pth"
-version "2.0.7"
+default_version "2.0.7"
 
-source :url => "ftp://ftp.gnu.org/gnu/pth/pth-2.0.7.tar.gz",
+source :url => "ftp://ftp.gnu.org/gnu/pth/pth-#{version}.tar.gz",
        :md5 => "9cb4a25331a4c4db866a31cbe507c793"
 
-relative_path "pth-2.0.7"
+relative_path "pth-#{version}"
 
 env = {
   "CFLAGS" => "-L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include",
@@ -34,4 +34,3 @@ build do
   command "make -j #{max_build_jobs}", :env => env
   command "make install", :env => env
 end
-

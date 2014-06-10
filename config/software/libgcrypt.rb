@@ -17,12 +17,12 @@
 #
 
 name "libgcrypt"
-version "1.5.0"
+default_version "1.6.1"
 
-source :url => "ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.5.0.tar.bz2",
-       :md5 => "693f9c64d50c908bc4d6e01da3ff76d8"
+source :url => "ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-#{version}.tar.bz2",
+       :md5 => "a5a5060dc2f80bcac700ab0236ea47dc"
 
-relative_path "libgcrypt-1.5.0"
+relative_path "libgcrypt-#{version}"
 
 env = {
   "CFLAGS" => "-L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include",
@@ -35,6 +35,3 @@ build do
   command "make -j #{max_build_jobs}", :env => env
   command "make install", :env => env
 end
-
-
-

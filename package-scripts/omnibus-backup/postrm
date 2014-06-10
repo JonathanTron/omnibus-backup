@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-# Perform necessary backup removal steps
+# Perform necessary omnibus-backup removal steps
 # after package is uninstalled.
 #
 
-echo "backup has been uninstalled!"
+echo "omnibus-backup has been uninstalled!"
 
 exit 0
