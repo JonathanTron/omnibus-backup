@@ -16,7 +16,7 @@
 #
 
 name "nokogiri"
-version "1.5.10"
+default_version "1.5.10"
 
 dependencies ["ruby", "rubygems", "libxml2", "libxslt", "libiconv"]
 

@@ -2,7 +2,6 @@ name "omnibus-backup"
 maintainer "jonathan@openhood.com"
 homepage "http://openhood.com"
 
-replaces        "omnibus-backup"
 install_path    "/opt/omnibus-backup"
 build_version   Omnibus::BuildVersion.new.semver
 build_iteration 1

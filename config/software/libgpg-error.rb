@@ -17,12 +17,12 @@
 #
 
 name "libgpg-error"
-version "1.9"
+default_version "1.13"
 
-source :url => "ftp://ftp.gnupg.org/gcrypt/libgpg-error/libgpg-error-1.9.tar.bz2",
-       :md5 => "521b98aa9395e7eaf0ef2236233a0796"
+source :url => "ftp://ftp.gnupg.org/gcrypt/libgpg-error/libgpg-error-1.13.tar.bz2",
+       :md5 => "fe0cfa7e15262ef8fdeee366109e9ff6"
 
-relative_path "libgpg-error-1.9"
+relative_path "libgpg-error-1.13"
 
 env = {
   "CFLAGS" => "-L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include",
@@ -34,4 +34,3 @@ build do
   command "make -j #{max_build_jobs}", :env => env
   command "make install", :env => env
 end
-

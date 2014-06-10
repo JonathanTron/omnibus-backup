@@ -17,12 +17,12 @@
 #
 
 name "gnupg"
-version "2.0.19"
+default_version "2.0.23"
 
-source :url => "ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.0.19.tar.bz2",
-       :md5 => "6a8589381ca1b0c1a921e9955f42b016"
+source :url => "ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.0.23.tar.bz2",
+       :md5 => "1c30b3aa1f99f17b4988e1ab616355d4"
 
-relative_path "gnupg-2.0.19"
+relative_path "gnupg-2.0.23"
 
 dependencies ["libgpg-error", "libassuan", "pth", "libksba", "readline", "libgcrypt"]
 

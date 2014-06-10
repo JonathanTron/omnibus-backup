@@ -17,14 +17,12 @@
 #
 
 name "readline"
-version "6.2"
+default_version "6.3"
 
-source :url => "ftp://ftp.cwru.edu/pub/bash/readline-6.2.tar.gz",
-       :md5 => "67948acb2ca081f23359d0256e9a271c"
+source :url => "ftp://ftp.cwru.edu/pub/bash/readline-6.3.tar.gz",
+       :md5 => "33c8fb279e981274f485fd91da77e94a"
 
-relative_path "readline-6.2"
-
-#dependencies ["libgpg-error", "libassuan", "pth", "libksba", "libedit"]
+relative_path "readline-6.3"
 
 env = {
   "CFLAGS" => "-L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include",
