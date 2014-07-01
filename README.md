@@ -1,7 +1,8 @@
-omnibus-backup Omnibus project
+Omnibus Backup
 ====================
-This project creates full-stack platform-specific packages for
-`omnibus-backup`!
+This project allows you to create full-stack platform-specific packages for the [Backup Ruby gem](https://github.com/meskyanichi/backup).
+The Backup Ruby gem lets you backup a unix system with an elegant DSL written in Ruby.
+With Omnibus Backup you can create a deb/rpm package that installs the backup ruby gem.
 
 Installation
 ------------
