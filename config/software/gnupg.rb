@@ -50,6 +50,6 @@ build do
            "--with-ksba-prefix=#{prefix}",
            "--with-pth-prefix=#{prefix}"
            ].join(" "), :env => env
-  command "make -j #{max_build_jobs}", :env => env
+  command "make -j #{workers}", :env => env
   command "make install", :env => env
 end
