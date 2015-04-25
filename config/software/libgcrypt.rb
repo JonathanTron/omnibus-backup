@@ -17,10 +17,10 @@
 #
 
 name "libgcrypt"
-default_version "1.6.1"
+default_version "1.6.3"
 
 source :url => "ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-#{version}.tar.bz2",
-       :md5 => "a5a5060dc2f80bcac700ab0236ea47dc"
+       :md5 => "4262c3aadf837500756c2051a5c4ae5e"
 
 relative_path "libgcrypt-#{version}"
 

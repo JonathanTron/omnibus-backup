@@ -1,8 +1,8 @@
 name "libidn"
-default_version "1.28"
+default_version "1.30"
 
 source :url => "http://ftp.gnu.org/gnu/libidn/libidn-#{version}.tar.gz",
-       :md5 => "43a6f14b16559e10a492acc65c4b0acc"
+       :md5 => "b17edc8551cd31cc5f14c82a9dabf58e"
 
 relative_path "libidn-#{version}"
 

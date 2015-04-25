@@ -17,10 +17,10 @@
 #
 
 name "libassuan"
-default_version "2.1.1"
+default_version "2.2.0"
 
 source :url => "ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-#{version}.tar.bz2",
-       :md5 => "757243cc4a71b30ed8d8dbe784035d36"
+       :md5 => "a104faed3e97b9c302c5d67cc22b1d60"
 
 relative_path "libassuan-#{version}"
 

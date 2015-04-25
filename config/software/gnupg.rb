@@ -17,10 +17,10 @@
 #
 
 name "gnupg"
-default_version "2.0.23"
+default_version "2.0.27"
 
 source :url => "ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-#{version}.tar.bz2",
-       :md5 => "1c30b3aa1f99f17b4988e1ab616355d4"
+       :md5 => "b35df68881a5ae432b0391b73773c698"
 
 relative_path "gnupg-#{version}"
 
