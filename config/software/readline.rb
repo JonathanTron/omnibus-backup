@@ -19,7 +19,7 @@
 name "readline"
 default_version "6.3"
 
-source :url => "ftp://ftp.cwru.edu/pub/bash/readline-#{version}.tar.gz",
+source :url => "https://ftp.gnu.org/gnu/readline/readline-#{version}.tar.gz",
        :md5 => "33c8fb279e981274f485fd91da77e94a"
 
 relative_path "readline-#{version}"
