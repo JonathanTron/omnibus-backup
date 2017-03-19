@@ -3,7 +3,7 @@ maintainer "jonathan@openhood.com"
 homepage "http://openhood.com"
 
 install_dir "/opt/omnibus-backup"
-build_version "4.2.3"
+build_version "4.4.0"
 build_iteration 1
 
 # creates required build directories

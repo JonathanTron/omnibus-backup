@@ -31,6 +31,7 @@ dependency "libgpg-error"
 dependency "libgcrypt"
 dependency "libksba"
 dependency "pth"
+dependency "ncurses"
 
 prefix = "#{install_dir}/embedded"
 
